@@ -195,7 +195,7 @@ function car() {
 }
 
 function update(dt) {
-  if (state !== 'play') return;
+  if (state !== 'play' || !(dt > 0)) return;
   const sub = 6, h = dt / sub;
   for (let i = 0; i < sub; i++) step(h);
 
